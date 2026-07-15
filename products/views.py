@@ -1,29 +1,29 @@
 from django.shortcuts import render
 from rest_framework import viewsets
-from .models import Product
-from .serializer import ProductSerializer
+from .models import Cars
+from .serializer import CarsSerializer
 from rest_framework.generics import ListAPIView,CreateAPIView,RetrieveDestroyAPIView,RetrieveUpdateAPIView,RetrieveUpdateDestroyAPIView
 # Create your views here.
 
-class ProductListView(ListAPIView):
-    queryset = Product.objects.all()
-    serializer_class = ProductSerializer
+class CarsList(ListAPIView):
+    queryset = Cars.objects.all()
+    serializer_class = CarsSerializer
     
-class Postcreate(CreateAPIView):
-    queryset = Product.objects.all()
-    serializer_class = ProductSerializer
+class CarCreate(CreateAPIView):
+    queryset = Cars.objects.all()
+    serializer_class = CarsSerializer
 
-class PostUpdate(RetrieveUpdateAPIView):
-    queryset = Product.objects.all()
-    serializer_class = ProductSerializer
+class CarUpdate(RetrieveUpdateAPIView):
+    queryset = Cars.objects.all()
+    serializer_class = CarsSerializer
 
-class ProductDelete(RetrieveUpdateDestroyAPIView):
-    queryset = Product.objects.all()
-    serializer_class = ProductSerializer
+class CarDelete(RetrieveUpdateDestroyAPIView):
+    queryset = Cars.objects.all()
+    serializer_class = CarsSerializer
     
-class ProductsUpdateDestroyAPIView(RetrieveDestroyAPIView):
-    queryset = Product.objects.all()
-    serializer_class = ProductSerializer
+class CarUpdateDestroyAPIView(RetrieveDestroyAPIView):
+    queryset = Cars.objects.all()
+    serializer_class = CarsSerializer
     
 
     

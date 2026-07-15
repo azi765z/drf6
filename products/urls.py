@@ -6,9 +6,9 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('products/', views.ProductListView.as_view()),
-    path('products/create/', views.Postcreate.as_view()),
-    path('products/update/<int:pk>/', views.PostUpdate.as_view()),
-    path('products/delete/<int:pk>/', views.ProductDelete.as_view()),
-    path('products/<int:pk>/', views.ProductsUpdateDestroyAPIView.as_view()),
+    path('cars/', views.CarsList.as_view()),
+    path('car/create/', views.CarCreate.as_view()),
+    path('car/update/<int:pk>/', views.CarUpdate.as_view()),
+    path('car/delete/<int:pk>/', views.CarDelete.as_view()),
+    path('car/<int:pk>/', views.CarUpdateDestroyAPIView.as_view()),
 ]
