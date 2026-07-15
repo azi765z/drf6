@@ -5,23 +5,23 @@ from .serializer import CarsSerializer
 from rest_framework.generics import ListAPIView,CreateAPIView,RetrieveDestroyAPIView,RetrieveUpdateAPIView,RetrieveUpdateDestroyAPIView
 # Create your views here.
 
-class CarsList(ListAPIView):
+class BookList(ListAPIView):
     queryset = Cars.objects.all()
     serializer_class = CarsSerializer
     
-class CarCreate(CreateAPIView):
+class BookCreate(CreateAPIView):
     queryset = Cars.objects.all()
     serializer_class = CarsSerializer
 
-class CarUpdate(RetrieveUpdateAPIView):
+class BokkUpdate(RetrieveUpdateAPIView):
     queryset = Cars.objects.all()
     serializer_class = CarsSerializer
 
-class CarDelete(RetrieveUpdateDestroyAPIView):
+class BookDelete(RetrieveUpdateDestroyAPIView):
     queryset = Cars.objects.all()
     serializer_class = CarsSerializer
     
-class CarUpdateDestroyAPIView(RetrieveDestroyAPIView):
+class BookUpdateDestroyAPIView(RetrieveDestroyAPIView):
     queryset = Cars.objects.all()
     serializer_class = CarsSerializer
     
