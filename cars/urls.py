@@ -2,9 +2,9 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('cars/', views.CarsList.as_view()),
-    path('car/create/', views.CarCreate.as_view()),
-    path('car/update/<int:pk>/', views.CarUpdate.as_view()),
-    path('car/delete/<int:pk>/', views.CarDelete.as_view()),
-    path('car/<int:pk>/', views.CarUpdateDestroyAPIView.as_view()),
+    path('cars/', views.cars_listview),
+    path('car/create/', views.cars_create),
+    path('car/update/<int:pk>/', views.car_update),
+    path('car/delete/<int:pk>/', views.cars_delete),
+    path('car/<int:pk>/patch/', views.cars_patch),
 ]
